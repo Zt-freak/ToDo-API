@@ -268,7 +268,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj"
+              },
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

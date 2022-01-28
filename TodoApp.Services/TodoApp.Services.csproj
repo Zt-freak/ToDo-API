@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TodoApp.Models\TodoApp.Models.csproj" />
+    <ProjectReference Include="..\TodoApp.Repositories\TodoApp.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>

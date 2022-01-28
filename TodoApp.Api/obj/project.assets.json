@@ -1612,6 +1612,10 @@
       "TodoApp.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "TodoApp.Models": "1.0.0",
+          "TodoApp.Repositories": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/TodoApp.Services.dll": {}
         },
