@@ -22,12 +22,14 @@ namespace TodoApp.Repositories
         public TEntity Insert(TEntity entity)
         {
             _dbSet.Add(entity);
+            SaveChanges();
             return entity;
         }
         public TEntity Update(TEntity entity)
         {
             _dbSet.Attach(entity);
             _dbContext.Entry(entity).State = EntityState.Modified;
+            SaveChanges();
             return entity;
         }
 
@@ -39,11 +41,13 @@ namespace TodoApp.Repositories
         public void Remove(TEntity entity)
         {
             _dbContext.Remove(entity);
+            SaveChanges();
         }
 
         public void Remove(object id)
         {
             _dbContext.Remove(_dbSet.Find(id));
+            SaveChanges();
         }
     }
 }

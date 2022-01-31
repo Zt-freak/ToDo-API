@@ -1,10 +1,11 @@
 ﻿using System;
 using TodoApp.Models;
 using TodoApp.Repositories.Interfaces;
+using TodoApp.Services.Interfaces;
 
 namespace TodoApp.Services
 {
-    public class TodoService
+    public class TodoService : ITodoService
     {
         private static IRepository<Todo> _todoRepo;
         public TodoService(IRepository<Todo> todoRepo)
@@ -12,23 +13,23 @@ namespace TodoApp.Services
             _todoRepo = todoRepo;
         }
 
-        public static Todo Create() => Create(new Todo() {
+        public Todo Create() => Create(new Todo() {
             Title = "Hello, world!",
             Description = "Default description."
         });
 
-        public static Todo Create(string title, string description) => Create(new Todo() {
+        public Todo Create(string title, string description) => Create(new Todo() {
             Title = title,
             Description = description
         });
 
-        public static Todo Create(string title, string description, bool isDone) => Create(new Todo() {
+        public Todo Create(string title, string description, bool isDone) => Create(new Todo() {
             Title = title,
             Description = description,
             IsDone = isDone
         });
 
-        public static Todo Create(Todo newTodo)
+        public Todo Create(Todo newTodo)
         {
             if (string.IsNullOrEmpty(newTodo.Title))
             {
@@ -41,12 +42,12 @@ namespace TodoApp.Services
             return newTodo;
         }
 
-        public static Todo Get(int id)
+        public Todo Get(int id)
         {
             return _todoRepo.GetById(id);
         }
 
-        public static Todo Update (int id, string title)
+        public Todo Update (int id, string title)
         {
             Todo updateTodo = _todoRepo.GetById(id);
             updateTodo.Title = title;
@@ -54,7 +55,7 @@ namespace TodoApp.Services
             return Update(updateTodo);
         }
 
-        public static Todo Update(int id, string title, string description)
+        public Todo Update(int id, string title, string description)
         {
             Todo updateTodo = _todoRepo.GetById(id);
             updateTodo.Title = title;
@@ -63,23 +64,23 @@ namespace TodoApp.Services
             return Update(updateTodo);
         }
 
-        public static Todo Update(Todo updateTodo)
+        public Todo Update(Todo updateTodo)
         {
             return _todoRepo.Update(updateTodo);
         }
 
-        public static Todo ToggleDone(Todo doneTodo)
+        public Todo ToggleDone(Todo doneTodo)
         {
-            doneTodo.IsDone = !doneTodo.IsDone;
+            doneTodo.IsDone = !(doneTodo.IsDone);
             return _todoRepo.Update(doneTodo);
         }
 
-        public static void Delete(int id)
+        public void Delete(int id)
         {
             _todoRepo.Remove(id);
         }
 
-        public static void Delete(Todo deleteTodo)
+        public void Delete(Todo deleteTodo)
         {
             _todoRepo.Remove(deleteTodo);
         }

@@ -9,6 +9,7 @@ services:
     environment:
       SA_PASSWORD: "yourStrong(!)Password"
       ACCEPT_EULA: "Y"
+      
   todo-api:
     container_name: todo-api
     image: todo-api
@@ -17,3 +18,5 @@ services:
       dockerfile: TodoApp.Api/Dockerfile
     ports:
       - 5000:5000
+    depends_on:
+      - todo-sql-server
