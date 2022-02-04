@@ -6,7 +6,6 @@ using TodoApp.Services.Interfaces;
 namespace TodoApp.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
     public class TodoController : ControllerBase
     {
         private readonly ITodoService _todoService;
@@ -16,36 +15,27 @@ namespace TodoApp.Api.Controllers
         }
 
         [HttpGet]
-        [Route("owo")]
-        public IActionResult Index() => Ok(
-                " _______________________\n" +
-                "< OwO >\n" +
-                "-----------------------\n" +
-                "    \\   ^__ ^\n" +
-                "     \\  (oo)\\_______\n" +
-                "        (__)\\       )\\/\\\n" +
-                "            || ----w |\n" +
-                "            ||     ||"
-        );
+        [Route("/todos")]
+        public IActionResult GetTodos() => Ok(new { Results = _todoService.GetAll()});
 
         [HttpPost]
-        [Route("create")]
+        [Route("/todo/create")]
         public IActionResult CreateTodo(Todo todo) => Ok(_todoService.Create(todo));
 
         [HttpGet]
-        [Route("get/{id}")]
+        [Route("/todo/{id}")]
         public IActionResult GetTodo(int id) => Ok(_todoService.Get(id));
 
         [HttpGet]
-        [Route("toggle/{id}")]
-        public IActionResult ToggleDone(int id) => Ok(_todoService.ToggleDone(_todoService.Get(id)));
+        [Route("/todo/{id}/check")]
+        public IActionResult CheckTodo(int id) => Ok(_todoService.ToggleDone(_todoService.Get(id)));
 
         [HttpPost]
-        [Route("edit")]
+        [Route("/todo/edit")]
         public IActionResult EditTodo(Todo todo) => Ok(_todoService.Update(todo));
 
         [HttpGet]
-        [Route("delete/{id}")]
+        [Route("/todo/{id}/delete")]
         public IActionResult DeleteTodo(int id)
         {
             try { _todoService.Delete(id); } 
@@ -55,5 +45,16 @@ namespace TodoApp.Api.Controllers
             }
             return Ok();
         }
+
+        [HttpGet]
+        [Route("/todo/owo")]
+        public IActionResult Index(string notFound) => NotFound(
+            "< OwO >\n" +
+            "    \\   ^__ ^\n" +
+            "     \\  (oo)\\_______\n" +
+            "        (__)\\       )\\/\\\n" +
+            "            || ----w |\n" +
+            "            ||     ||"
+        );
     }
 }

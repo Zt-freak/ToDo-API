@@ -1,0 +1,7 @@
+<div class="todo-item">
+    <span class="todo-item__title">{{todo.title}}</span>
+    <span class="todo-item__description">{{todo.description}}</span>
+    <span class="todo-item__donetext">completed:</span>
+    <input type="checkbox" [checked]="todo.isDone" (change)="changeChecked()">
+    <button (click)="remove()">delete</button>
+</div>

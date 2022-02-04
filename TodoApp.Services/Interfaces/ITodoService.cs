@@ -1,4 +1,5 @@
-﻿using TodoApp.Models;
+﻿using System.Collections.Generic;
+using TodoApp.Models;
 
 namespace TodoApp.Services.Interfaces
 {
@@ -9,6 +10,7 @@ namespace TodoApp.Services.Interfaces
         Todo Create(string title, string description, bool isDone);
         Todo Create(Todo newTodo);
         Todo Get(int id);
+        IEnumerable<Todo> GetAll();
         Todo Update(int id, string title, string description);
         Todo Update(Todo updateTodo);
         Todo ToggleDone(Todo doneTodo);

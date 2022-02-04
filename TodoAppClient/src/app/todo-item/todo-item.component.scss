@@ -1,0 +1,12 @@
+.todo-item {
+    width: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px rgba(0,0,0,.5);
+}
+
+.todo-item__title {
+    font-weight: bold;
+}

@@ -3,12 +3,12 @@ version: '3.9'
 services:
   todo-sql-server:
     container_name: todo-sql-server
-    image: "mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04"
+    image: mcr.microsoft.com/mssql/server:2019-CU14-ubuntu-20.04
     ports:
-    - "1433:1433"
+    - 1433:1433
     environment:
-      SA_PASSWORD: "yourStrong(!)Password"
-      ACCEPT_EULA: "Y"
+      SA_PASSWORD: yourStrong(!)Password
+      ACCEPT_EULA: Y
       
   todo-api:
     container_name: todo-api
@@ -20,3 +20,15 @@ services:
       - 5000:5000
     depends_on:
       - todo-sql-server
+
+  todo-nginx:
+    container_name: todo-nginx
+    build:
+      context: .
+      dockerfile: Nginx/Dockerfile
+    volumes:
+      - ./TodoAppClient/dist/TodoAppClient:/data/www
+    ports:
+      - 8080:80
+    depends_on:
+      - todo-api

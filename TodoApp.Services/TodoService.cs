@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TodoApp.Models;
 using TodoApp.Repositories.Interfaces;
 using TodoApp.Services.Interfaces;
@@ -45,6 +46,11 @@ namespace TodoApp.Services
         public Todo Get(int id)
         {
             return _todoRepo.GetById(id);
+        }
+
+        public IEnumerable<Todo> GetAll()
+        {
+            return _todoRepo.GetAll();
         }
 
         public Todo Update (int id, string title)

@@ -18,4 +18,8 @@
     <ProjectReference Include="..\TodoApp.Services\TodoApp.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Nginx\" />
+  </ItemGroup>
+
 </Project>
