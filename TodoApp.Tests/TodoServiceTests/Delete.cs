@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Moq;
+using TodoApp.Models;
+using TodoApp.Repositories.Interfaces;
+using TodoApp.Services;
+using Xunit;
 
 namespace TodoApp.Tests.TodoServiceTests
 {
-    class Delete
+    public class Delete
     {
+        [Fact]
+        public void ItShould_DeleteATodo()
+        {
+           
+        }
     }
 }

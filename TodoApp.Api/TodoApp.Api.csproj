@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Nginx\**" />
+    <Content Remove="Nginx\**" />
+    <EmbeddedResource Remove="Nginx\**" />
+    <None Remove="Nginx\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -16,10 +23,6 @@
     <ProjectReference Include="..\TodoApp.Models\TodoApp.Models.csproj" />
     <ProjectReference Include="..\TodoApp.Repositories\TodoApp.Repositories.csproj" />
     <ProjectReference Include="..\TodoApp.Services\TodoApp.Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Nginx\" />
   </ItemGroup>
 
 </Project>
