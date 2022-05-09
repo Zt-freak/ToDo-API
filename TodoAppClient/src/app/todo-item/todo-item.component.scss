@@ -1,0 +1,13 @@
+:host {
+    min-height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    background-color: #EDD4B2;
+    box-shadow: 0 1px 1px rgba(0,0,0, 1);
+}
+
+.todo-item__title {
+    font-weight: bold;
+}

@@ -32,7 +32,17 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj"
+              },
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj"
+              },
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Services\\TodoApp.Services.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Services\\TodoApp.Services.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -45,6 +55,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -64,6 +80,224 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj",
+        "projectName": "TodoApp.Models",
+        "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj",
+        "packagesPath": "C:\\Users\\bnkho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bnkho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ztfreak/_packaging/TheEncrypt/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
+        "projectName": "TodoApp.Repositories",
+        "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
+        "packagesPath": "C:\\Users\\bnkho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bnkho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ztfreak/_packaging/TheEncrypt/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Services\\TodoApp.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Services\\TodoApp.Services.csproj",
+        "projectName": "TodoApp.Services",
+        "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Services\\TodoApp.Services.csproj",
+        "packagesPath": "C:\\Users\\bnkho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\bnkho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/ztfreak/_packaging/TheEncrypt/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Models\\TodoApp.Models.csproj"
+              },
+              "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
+                "projectPath": "C:\\Users\\bnkho\\source\\repos\\TodoApp\\TodoApp.Repositories\\TodoApp.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
